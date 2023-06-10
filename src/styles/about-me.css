@@ -1,0 +1,16 @@
+.about-me-container {
+  color: white;
+  animation: container ease 300ms;
+}
+
+.header-title {
+  font-size: 3em;
+  color: var(--primary-200);
+}
+
+.about-me-p {
+  margin-top: 60px;
+  font-size: var(--paragraph);
+  line-height: 30px;
+  font-weight: 500;
+}
