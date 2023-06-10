@@ -7,7 +7,7 @@ const projs = [
   {
     title: "SAAS-Website",
     description:
-      "This beautifully designed web page showcases a seamless blend of HTML and CSS, resulting in a visually stunning and interactive experience. ",
+      "This beautifully designed web page showcases a seamless blend of HTML and CSS, resulting in a visually stunning and interactive experience",
     link: "https://saas-website-iota.vercel.app/",
     img: saasImg,
     icons: [

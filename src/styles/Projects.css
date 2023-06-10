@@ -3,7 +3,7 @@
 }
 
 .project-container {
-  margin-top: 60px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +20,7 @@
 }
 
 .project-header {
-  font-size: 2.9em;
+  font-size: 45px;
   font-weight: 500;
   color: var(--primary-200);
 }
@@ -41,6 +41,7 @@
 .project-des {
   font-size: var(--paragraph);
   color: var(--neutral-100);
+  line-height: 30px;
 }
 
 .project-img {
@@ -61,5 +62,5 @@
 }
 
 .project-icon-container i {
-  font-size: var(--size-200);
+  font-size: var(--size-100);
 }

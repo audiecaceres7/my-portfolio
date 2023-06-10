@@ -1,14 +1,14 @@
 /* Base Styles */
 :root {
   /* main colors*/
-  --primary-100: #4451ff;
+  --primary-100: #424ff4;
   --primary-200: #16bac5;
   --primary-300: #5fbff9;
   --primary-400: #101212;
   --primary-500: #e9f1f4;
 
   --neutral-100: #f4f5f7;
-  --neutral-200: #e1e1e1;
+  --neutral-200: #fff;
   --neutral-300: #737581;
 
   /* font size */
@@ -93,16 +93,20 @@ a {
   }
 
   .side-icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 
 @media screen and (max-width: 850px) {
+  .nav-bar {
+    margin-top: 30px;
+  }
+
   .main-container {
-    margin-top: 4rem;
+    margin-top: 40px;
     font-size: 0.8em;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
   }
 
   .menu-bar {
@@ -133,6 +137,10 @@ a {
     display: block;
   }
 
+  .project-icon-container {
+    font-size: var(--size-400);
+  }
+
   @media screen and (max-width: 600px) {
     .icon {
       transform: none;
@@ -153,9 +161,15 @@ a {
 
   @media screen and (max-width: 620px) {
     .project-container {
+      text-align: center;
       flex-direction: column;
-      align-items: start;
+      align-items: center;
       padding: 20px;
+    }
+
+    .project-icon-container {
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .project-info {

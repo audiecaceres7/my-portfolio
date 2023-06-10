@@ -47,7 +47,7 @@
   padding: 20px;
   font-size: 1.1em;
   height: 300px;
-  animation: open 250ms ease-in-out;
+  animation: container 250ms ease-in-out;
 }
 
 .menu-bar ul {

@@ -4,12 +4,12 @@
 }
 
 .header-title {
-  font-size: 3em;
+  font-size: 45px;
   color: var(--primary-200);
 }
 
 .about-me-p {
-  margin-top: 60px;
+  margin-top: 30px;
   font-size: var(--paragraph);
   line-height: 30px;
   font-weight: 500;
