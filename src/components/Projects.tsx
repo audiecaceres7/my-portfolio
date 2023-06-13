@@ -1,5 +1,6 @@
 import saasImg from "../assets/project-1.jpeg";
 import folioImg from "../assets/project-2.jpeg";
+import pokeApiImg from "../assets/project-3.jpeg";
 import "../styles/Projects.css";
 import Project from "./Project";
 
@@ -25,6 +26,18 @@ const projs = [
       <i className="fa-brands fa-html5"></i>,
       <i className="fa-brands fa-css3-alt"></i>,
       <i className="fa-brands fa-js"></i>,
+    ],
+  },
+  {
+    title: "Poke-Api",
+    description:
+      "This is a small and simple version of a pokedex crafted with HTML, CSS and Typescript. Using the pokeApi and adding some interactivity",
+    link: "https://poke-api-flame.vercel.app/",
+    img: pokeApiImg,
+    icons: [
+      <i className="fa-brands fa-html5"></i>,
+      <i className="fa-brands fa-css3-alt"></i>,
+      <div className="mini-ts-icon">TS</div>,
     ],
   },
 ];
