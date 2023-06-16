@@ -44,18 +44,28 @@ const projs = [
 
 const Projects = () => {
   return (
-    <div className="project-section">
+    <p className="project-section">
       <p className="project-header">Projects</p>
       {projs.map((proj) => (
-        <Project
-          title={proj.title}
-          description={proj.description}
-          img={proj.img}
-          link={proj.link}
-          icons={proj.icons}
-        />
+        <div>
+          <Project
+            title={proj.title}
+            description={proj.description}
+            img={proj.img}
+            link={proj.link}
+            icons={proj.icons}
+          />
+          <div
+            style={{
+              margin: "3rem 0",
+              height: "2px",
+              backgroundColor: "#141919",
+              borderRadius: "5px",
+            }}
+          />
+        </div>
       ))}
-    </div>
+    </p>
   );
 };
 

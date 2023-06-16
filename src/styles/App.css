@@ -117,7 +117,7 @@ a {
     order: 1;
   }
 
-  .side-bar {
+  .side-bar-sticky {
     position: initial;
     flex-direction: row;
     gap: 30px;
@@ -186,7 +186,7 @@ a {
   }
 
   @media screen and (max-width: 350px) {
-    .side-bar {
+    .side-bar-sticky {
       width: auto;
       justify-content: space-between;
       gap: 0;
