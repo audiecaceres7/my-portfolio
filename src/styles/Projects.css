@@ -1,23 +1,17 @@
 .project-section {
   color: var(--neutral-100);
-}
-
-.project-container {
-  margin-top: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0px 0px 10px #090909;
-  border-radius: 5px;
-  transition: ease-in 100ms;
-  gap: 20px;
-  padding: 30px;
   animation: container ease 300ms;
 }
 
-.project-container:hover {
-  transform: translateY(-5px) scale(1);
-  box-shadow: 0px 0px 10px 7px #090909;
+.project-container {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  transition: ease-in 100ms;
+  gap: 20px;
+  animation: container ease-in 200ms;
 }
 
 .project-header {
@@ -27,7 +21,6 @@
 }
 
 .project-info {
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;

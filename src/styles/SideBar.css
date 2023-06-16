@@ -1,16 +1,17 @@
 .side-bar {
+  position: relative;
+}
+
+.side-bar-sticky {
   position: sticky;
-  top: 35%;
-  gap: 20px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  gap: 20px;
+  top: 5rem;
 }
 
 .side-icon {
-  position: relative;
-  display: inline-block;
-  text-align: middle;
   align-items: center;
   color: var(--neutral-200);
 }

@@ -27,13 +27,15 @@ const sideIcons = [
 const SideBar = () => {
   return (
     <div className="side-bar">
-      {sideIcons.map((icon) => (
-        <SideLinks
-          key={icon.className}
-          className={icon.className}
-          link={icon.link}
-        />
-      ))}
+      <div className="side-bar-sticky">
+        {sideIcons.map((icon) => (
+          <SideLinks
+            key={icon.className}
+            className={icon.className}
+            link={icon.link}
+          />
+        ))}
+      </div>
     </div>
   );
 };

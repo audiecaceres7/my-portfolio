@@ -30,8 +30,8 @@ const NavComponent = () => {
               About Me
             </li>
           </a>
-          <i
-            className="bar fa-solid fa-bars"
+          <button
+            className={modal ? "bar active" : "bar"}
             onClick={() => {
               if (!modal) {
                 setModal(true);
@@ -39,7 +39,9 @@ const NavComponent = () => {
                 setModal(false);
               }
             }}
-          ></i>
+          >
+            <i className="fa-solid fa-bars"></i>
+          </button>
         </ul>
         {modal ? <MenuButton setModal={setModal} /> : ""}
       </nav>
