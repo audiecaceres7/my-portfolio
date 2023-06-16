@@ -1,5 +1,18 @@
-.logo {
+.logo-container {
   font-size: var(--size-100);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-homura {
+  background: -webkit-linear-gradient(#ffce0b, #f30000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {
   font-weight: 500;
   color: var(--neutral-200);
 }

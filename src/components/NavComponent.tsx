@@ -10,7 +10,10 @@ const NavComponent = () => {
   return (
     <div className="container">
       <nav className="nav-bar">
-        <p className="logo">AC_PORT</p>
+        <div className="logo-container">
+          <p className="logo-homura">炎</p>
+          <p className="logo">AC_Port</p>
+        </div>
         <ul className="nav-items">
           <a>
             <li className="nav-link" onClick={() => setPage("Home")}>
