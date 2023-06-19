@@ -6,17 +6,6 @@ import Project from "./Project";
 
 const projs = [
   {
-    title: "SAAS-Website",
-    description:
-      "This beautifully designed web page showcases a seamless blend of HTML and CSS, resulting in a visually stunning and interactive experience",
-    link: "https://saas-website-iota.vercel.app/",
-    img: saasImg,
-    icons: [
-      <i className="fa-brands fa-html5"></i>,
-      <i className="fa-brands fa-css3-alt"></i>,
-    ],
-  },
-  {
     title: "Folio-website",
     description:
       "This is a captivating portfolio page crafted with HTML, CSS, and JavaScript. Experience seamless navigation, stunning visuals, and interactive elements",
@@ -38,6 +27,17 @@ const projs = [
       <i className="fa-brands fa-html5"></i>,
       <i className="fa-brands fa-css3-alt"></i>,
       <div className="mini-ts-icon">TS</div>,
+    ],
+  },
+  {
+    title: "SAAS-Website",
+    description:
+      "This beautifully designed web page showcases a seamless blend of HTML and CSS, resulting in a visually stunning and interactive experience",
+    link: "https://saas-website-iota.vercel.app/",
+    img: saasImg,
+    icons: [
+      <i className="fa-brands fa-html5"></i>,
+      <i className="fa-brands fa-css3-alt"></i>,
     ],
   },
 ];
