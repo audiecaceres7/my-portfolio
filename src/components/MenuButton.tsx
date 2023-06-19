@@ -9,14 +9,6 @@ const MenuButton = ({ setModal }: any) => {
         <button
           className="menu-link"
           onClick={() => {
-            setPage("Home"), setModal(false);
-          }}
-        >
-          <li>Home</li>
-        </button>
-        <button
-          className="menu-link"
-          onClick={() => {
             setPage("Projects"), setModal(false);
           }}
         >

@@ -16,7 +16,7 @@ const Project = ({ title, description, img, link, icons }: ProjectProps) => {
           <h3 className="project-tech">Technologies used</h3>
           <div className="project-icon-container">{icons}</div>
         </div>
-        <img className="project-img" src={img}></img>
+        <img className="project-img" src={img} loading="lazy"></img>
       </div>
     </a>
   );

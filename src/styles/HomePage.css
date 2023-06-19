@@ -17,6 +17,7 @@
 }
 
 .icon-container {
+  width: 600px;
   margin-top: 3rem;
   position: relative;
   height: 200px;

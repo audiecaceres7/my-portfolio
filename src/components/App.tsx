@@ -15,7 +15,7 @@ function App() {
   const [page, setPage] = useState<page>("Home");
 
   return (
-    <PageProvider.Provider value={{ setPage }}>
+    <PageProvider.Provider value={{ setPage, page }}>
       <NavComponent />
       <div className="main-container container">
         <div className="left-page">

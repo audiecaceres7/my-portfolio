@@ -107,6 +107,10 @@ a {
     gap: 40px;
   }
 
+  .icon-container {
+    width: auto;
+  }
+
   .menu-bar {
     display: block;
     width: 200px;
@@ -149,7 +153,7 @@ a {
     }
 
     .menu-link:hover {
-      color: var(--primary-100);
+      color: var(--neutral-100);
     }
 
     .nav-items {

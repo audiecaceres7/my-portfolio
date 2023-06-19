@@ -1,4 +1,5 @@
 .logo-container {
+  cursor: pointer;
   font-size: var(--size-100);
   display: flex;
   align-items: center;
@@ -34,11 +35,18 @@
 }
 
 .nav-link {
+  border: none;
+  background-color: var(--primary-400);
   padding: 10px 15px;
   color: var(--neutral-200);
   font-size: var(--paragraph);
   transition: ease-in-out 200ms;
   cursor: pointer;
+}
+
+.nav-link.active,
+.nav-link:focus {
+  background-color: var(--primary-100);
 }
 
 .nav-link:hover {
@@ -82,6 +90,7 @@
 
 .menu-link:hover {
   background-color: var(--primary-100);
+  color: var(--neutral-100);
 }
 
 .menu-link:focus {
