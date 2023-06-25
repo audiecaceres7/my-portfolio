@@ -1,16 +1,20 @@
 import "./styles/App.css";
 import NavBar from "./NavBar";
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainPage from "./MainPage";
+import PortfolioPage from "./PortfolioPage";
 
 function App() {
-  const [theme, setTheme] = useState<string>(
-    localStorage.getItem("theme") || "dark"
-  );
-
   return (
-    <div className={`container ${theme}`}>
-      <NavBar themeValue={theme} setThemeValue={setTheme} />
-    </div>
+    <BrowserRouter>
+      <div className="container">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/PortfolioPage" element={<PortfolioPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

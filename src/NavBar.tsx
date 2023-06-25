@@ -1,34 +1,15 @@
-import { useState, useEffect } from "react";
+import {
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import ToggleButton from "./ToggleButton";
 
-type NavBarProps = {
-  themeValue: string;
-  setThemeValue: (theme: string) => void;
-};
-
-const NavBar = ({ themeValue, setThemeValue }: NavBarProps) => {
-  const [themeIcon, setThemeIcon] = useState<boolean>(false);
-
-  useEffect(() => {
-    document.body.className = themeValue;
-    localStorage.setItem("theme", themeValue);
-
-    if (themeValue === "light") {
-      setThemeIcon(true);
-    } else {
-      setThemeIcon(false);
-    }
-  }, [themeValue]);
-
-  const toggleTheme = () => {
-    if (themeValue === "light") {
-      setThemeValue("dark");
-      setThemeIcon(false);
-    } else {
-      setThemeValue("light");
-      setThemeIcon(true);
-    }
-  };
-
+const NavBar = () => {
   return (
     <nav className="nav-bar">
       <div
@@ -36,7 +17,7 @@ const NavBar = ({ themeValue, setThemeValue }: NavBarProps) => {
           display: "flex",
           alignItems: "center",
           gap: "60px",
-          fontSize: "20px",
+          fontSize: "25px",
           fontWeight: "600",
         }}
       >
@@ -51,12 +32,7 @@ const NavBar = ({ themeValue, setThemeValue }: NavBarProps) => {
           <p>炎</p>
           <p>Audie Caceres</p>
         </div>
-        <ul
-          style={{
-            display: "flex",
-            gap: "40px",
-          }}
-        >
+        <ul className="nav-links">
           <li>
             <button className="btn">Portfolio</button>
           </li>
@@ -65,20 +41,27 @@ const NavBar = ({ themeValue, setThemeValue }: NavBarProps) => {
           </li>
         </ul>
       </div>
-      <button
-        className={
-          themeValue === "dark" ? "theme-panel-dark" : "theme-panel-light"
-        }
-        onClick={toggleTheme}
-      >
-        {themeIcon ? (
-          <i className="theme-icon fa-solid fa-moon"></i>
-        ) : (
-          <i className="theme-icon fa-solid fa-sun"></i>
-        )}
-      </button>
+      <div className="panel-container">
+        <ToggleButton />
+        <Menu>
+          <MenuButton
+            as={IconButton}
+            aria-label="Options"
+            icon={<HamburgerIcon />}
+            display={{ base: "inline-block", md: "none" }}
+            variant="outline"
+          />
+          <MenuList fontSize="1rem">
+            <MenuItem>
+              <Link to="/">About Me</Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/PortfolioPage">Portfolio</Link>
+            </MenuItem>
+          </MenuList>
+        </Menu>
+      </div>
     </nav>
   );
 };
-
 export default NavBar;
