@@ -4,10 +4,12 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  Box,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ToggleButton from "./ToggleButton";
+import React from "react";
 
 const NavBar = () => {
   return (
@@ -41,26 +43,28 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      <div className="panel-container">
+      <Box>
         <ToggleButton />
-        <Menu>
-          <MenuButton
-            as={IconButton}
-            aria-label="Options"
-            icon={<HamburgerIcon />}
-            display={{ base: "inline-block", md: "none" }}
-            variant="outline"
-          />
-          <MenuList fontSize="1rem">
-            <MenuItem>
-              <Link to="/">About Me</Link>
-            </MenuItem>
-            <MenuItem>
-              <Link to="/PortfolioPage">Portfolio</Link>
-            </MenuItem>
-          </MenuList>
-        </Menu>
-      </div>
+        <Box ml={2} display={{ base: "inline-block", md: "none" }}>
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label="Options"
+              icon={<HamburgerIcon />}
+              display={{ base: "inline-block", md: "none" }}
+              variant="outline"
+            />
+            <MenuList>
+              <MenuItem>
+                <Link to="/">About Me</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/PortfolioPage">Portfolio</Link>
+              </MenuItem>
+            </MenuList>
+          </Menu>
+        </Box>
+      </Box>
     </nav>
   );
 };
