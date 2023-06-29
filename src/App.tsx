@@ -1,18 +1,14 @@
 import "./styles/App.css";
 import NavBar from "./NavBar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainPage from "./MainPage";
-import PortfolioPage from "./PortfolioPage";
+import { BrowserRouter } from "react-router-dom";
+import AnimatedRoutes from "./Routes";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="container">
         <NavBar />
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/PortfolioPage" element={<PortfolioPage />} />
-        </Routes>
+        <AnimatedRoutes />
       </div>
     </BrowserRouter>
   );

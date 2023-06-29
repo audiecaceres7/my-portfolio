@@ -9,9 +9,9 @@ const ToggleButton = () => {
       <motion.div
         style={{ display: "inline-block" }}
         key={useColorModeValue("dark", "light")}
-        initial={{ x: 40, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: -40, opacity: 0 }}
+        initial={{ y: -40, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 40, opacity: 0 }}
         transition={{ duration: 0.2 }}
       >
         <IconButton
