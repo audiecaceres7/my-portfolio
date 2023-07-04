@@ -30,8 +30,9 @@ const NavBar = () => {
             color: "inherit",
           }}
         >
-          <p>炎</p>
-          <p>Audie Caceres</p>
+          <Link to="/">
+            <p>炎 Audie Caceres</p>
+          </Link>
         </div>
         <ul className="nav-links">
           <li>
