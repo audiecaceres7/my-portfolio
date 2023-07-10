@@ -13,13 +13,13 @@ export const variants = {
 export const imgVariants = {
   hidden: { opacity: 0, x: 50, y: 0 },
   enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: -20, y: 0, duration: 0.1 },
+  exit: { opacity: 0, x: -50, y: 0 },
 };
 
 const styles = {
   global: (props: any) => ({
     body: {
-      bg: mode("#efe5dc", "#17171a")(props),
+      bg: mode("#efe5dc", "#16161c")(props),
     },
   }),
 };

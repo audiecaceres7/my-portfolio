@@ -27,7 +27,7 @@ const FolioWebsite = () => {
       initial="hidden"
       animate="enter"
       exit="exit"
-      transition={{ duration: 0.2, type: "EaseInOut" }}
+      transition={{ duration: 0.3, type: "EaseInOut" }}
     >
       <Box>
         <Heading marginTop="3rem" textAlign="center" fontSize="3rem">
