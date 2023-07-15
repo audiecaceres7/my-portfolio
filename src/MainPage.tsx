@@ -31,14 +31,32 @@ const MainPage = () => {
         <Heading as="h1" fontSize="3rem">
           Audie Caceres
         </Heading>
-        <Flex alignItems="center" gap={8}>
-          <Text fontWeight="500" marginTop={4}>
-            I'm a 23 year old software engineer, specializing in front-end
-            development using technologies such as TypeScript, HTML, CSS and
-            React . I thrive on creating intuitive and engaging user interfaces
-            that blend functionality and deliver exceptional digital experience
-            .
-          </Text>
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          gap={8}
+          borderRadius="10px 100px 100px 10px"
+          borderWidth={1.3}
+          borderColor="pink.900"
+          padding="20px 30px"
+          marginTop="1rem"
+        >
+          <Box w={400}>
+            <Text>
+              My name is Audie Caceres and I'm a 23 year old software engineer
+              living in Miami, FL.
+            </Text>
+            <Button
+              as={Link}
+              to="/PortfolioPage"
+              rightIcon={<ArrowForwardIcon />}
+              marginTop={5}
+              colorScheme="teal"
+              borderRadius={3}
+            >
+              My portfolio
+            </Button>
+          </Box>
           <Image
             boxSize="140px"
             src={profileImage}
@@ -46,18 +64,7 @@ const MainPage = () => {
             borderRadius="full"
           />
         </Flex>
-        <Button
-          as={Link}
-          to="/PortfolioPage"
-          rightIcon={<ArrowForwardIcon />}
-          marginTop={5}
-          colorScheme="teal"
-          borderRadius={3}
-        >
-          My portfolio
-        </Button>
-
-        <section style={{ marginTop: "3rem" }}>
+        <section style={{ marginTop: "3rem", width: "200px" }}>
           <Flex alignItems="baseline" gap={3}>
             <Heading>Links</Heading>
             <FaExternalLinkAlt fontSize="1.5rem" />
@@ -106,12 +113,17 @@ const MainPage = () => {
             <Heading>Bio</Heading>
             <FaBook fontSize="1.5rem" />
           </Flex>
-          <Text fontWeight="500" marginTop={5}>
+          <Text fontWeight="400" marginTop={5}>
             My name is Audie Caceres and I'm a 23 year old software engineer
             living in Miami, FL. Originally I was born in the United States, but
-            I lived most of my childhood in Nicaragua. Ever since I was little I
-            had a deep passion for creativity in general and I always found
-            myself wanting to learn new things .
+            I moved to Nicaragua when I was 6 and lived most of my child hood
+            there. When I turned 19, I decided to move back to the U.S to start
+            a new journey in life
+          </Text>
+          <Text fontWeight="400" marginTop={5}>
+            I have a huge passion for programming, animation, music, design and
+            ever since I was little I had a deep respect for creativity in
+            general and I always found myself wanting to learn new things
           </Text>
         </section>
       </motion.article>
