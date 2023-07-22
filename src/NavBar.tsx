@@ -5,6 +5,7 @@ import {
   MenuItem,
   MenuList,
   Box,
+  Flex,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -47,26 +48,28 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      <ToggleButton />
-      <Box ml={2} display={{ base: "inline-block", md: "none" }}>
-        <Menu>
-          <MenuButton
-            as={IconButton}
-            aria-label="Options"
-            icon={<HamburgerIcon />}
-            display={{ base: "inline-block", md: "none" }}
-            variant="outline"
-          />
-          <MenuList>
-            <MenuItem as={Link} to="/">
-              About me
-            </MenuItem>
-            <MenuItem as={Link} to="/PortfolioPage">
-              Portfolio
-            </MenuItem>
-          </MenuList>
-        </Menu>
-      </Box>
+      <Flex gap={1}>
+        <ToggleButton />
+        <Box ml={2} display={{ base: "inline-block", md: "none" }}>
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label="Options"
+              icon={<HamburgerIcon />}
+              display={{ base: "inline-block", md: "none" }}
+              variant="outline"
+            />
+            <MenuList>
+              <MenuItem as={Link} to="/">
+                About me
+              </MenuItem>
+              <MenuItem as={Link} to="/PortfolioPage">
+                Portfolio
+              </MenuItem>
+            </MenuList>
+          </Menu>
+        </Box>
+      </Flex>
     </nav>
   );
 };

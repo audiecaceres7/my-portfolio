@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { variants } from "./main";
-import { Heading, Grid } from "@chakra-ui/react";
+import { Heading, Grid, useMediaQuery } from "@chakra-ui/react";
 import projectOne from "./assets/project-1.jpeg";
 import projectTwo from "./assets/project-2.jpeg";
 import projectThree from "./assets/project-3.jpeg";
 import PortfolioCard from "./PortfolioCard";
 
 const PortfolioPage = () => {
+  const [isLargerThan740] = useMediaQuery(["(min-width: 740px)"]);
   return (
     <div>
       <motion.div
@@ -21,7 +22,13 @@ const PortfolioPage = () => {
         <Heading as="h1" fontSize="3rem" marginTop="2rem">
           My Portfolio
         </Heading>
-        <Grid templateColumns="repeat(2, 1fr)" gap={10}>
+        <Grid
+          templateColumns={
+            isLargerThan740 ? "repeat(2, 1fr)" : "repeat(1, 1fr)"
+          }
+          gap={10}
+          paddingBottom="5rem"
+        >
           <Link to="/PokeApiWebsite">
             <PortfolioCard
               cardImage={projectThree}

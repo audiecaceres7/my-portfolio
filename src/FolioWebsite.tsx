@@ -5,6 +5,7 @@ import {
   Flex,
   Link,
   Button,
+  useMediaQuery,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { imgVariants } from "./main";
@@ -21,6 +22,10 @@ import folio4 from "./assets/folio4.png";
 import folio5 from "./assets/folio5.png";
 
 const FolioWebsite = () => {
+  const [isLargerThan790, isLargerThan460] = useMediaQuery([
+    "(min-width: 790px)",
+    "(min-width: 460px)",
+  ]);
   return (
     <motion.div
       variants={imgVariants}
@@ -42,12 +47,14 @@ const FolioWebsite = () => {
           <Flex
             alignItems="center"
             marginTop="1rem"
+            direction={isLargerThan460 ? "row" : "column"}
             p={3}
             bg={useColorModeValue("#d4ffff", "#263838")}
             color={useColorModeValue("teal", "teal.100")}
             borderRadius="10px"
-            w="70%"
+            w="100%"
             gap={3}
+            fontSize="1rem"
           >
             <Text>website</Text>
             <Link
@@ -68,7 +75,7 @@ const FolioWebsite = () => {
             bg={useColorModeValue("#d4ffff", "#263838")}
             color={useColorModeValue("teal", "teal.100")}
             borderRadius="10px"
-            w="40%"
+            w={isLargerThan790 ? "50%" : "100%"}
           >
             <Flex alignItems="center" gap={2}>
               Technologies
@@ -85,7 +92,11 @@ const FolioWebsite = () => {
           />
         </Box>
         <ReactLink to="/PortfolioPage">
-          <Button leftIcon={<ArrowBackIcon />} marginTop="2rem">
+          <Button
+            leftIcon={<ArrowBackIcon />}
+            marginTop="2rem"
+            marginBottom="3rem"
+          >
             back
           </Button>
         </ReactLink>

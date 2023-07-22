@@ -11,6 +11,7 @@ import {
   Icon,
   Flex,
   Image,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
@@ -18,6 +19,11 @@ import { variants } from "./main";
 import profileImage from "./assets/IMG_0596 2(1).jpg";
 
 const MainPage = () => {
+  const [isLargerThan480, isLargerThan370] = useMediaQuery([
+    "(min-width: 480px)",
+    "(min-width: 370px)",
+  ]);
+
   return (
     <Box marginTop="3rem">
       <motion.article
@@ -28,20 +34,21 @@ const MainPage = () => {
         exit="exit"
         transition={{ duration: 0.3, type: "EaseInOut" }}
       >
-        <Heading as="h1" fontSize="3rem">
+        <Heading as="h1" fontSize={isLargerThan480 ? "3rem" : "2.7rem"}>
           Audie Caceres
         </Heading>
         <Flex
           justifyContent="space-between"
-          alignItems="center"
-          gap={8}
+          direction={isLargerThan370 ? "row" : "column"}
+          alignItems={isLargerThan370 ? "center" : "start"}
+          gap={isLargerThan480 ? 0 : 4}
           borderRadius="10px 100px 100px 10px"
           borderWidth={1.3}
           borderColor="pink.900"
-          padding="20px 30px"
+          padding={isLargerThan480 ? "20px 30px" : "35px"}
           marginTop="1rem"
         >
-          <Box w={400}>
+          <Box w={isLargerThan370 ? "400px" : "auto"}>
             <Text>
               My name is Audie Caceres and I'm a 23 year old software engineer
               living in Miami, FL.
@@ -108,7 +115,7 @@ const MainPage = () => {
             </Link>
           </List>
         </section>
-        <section style={{ marginTop: "3rem" }}>
+        <section style={{ marginTop: "3rem", paddingBottom: "2rem" }}>
           <Flex alignItems="baseline" gap={3}>
             <Heading>Bio</Heading>
             <FaBook fontSize="1.5rem" />

@@ -6,6 +6,7 @@ import {
   Flex,
   Link,
   Button,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { Link as ReactLink } from "react-router-dom";
@@ -21,6 +22,11 @@ import saas4 from "./assets/saas4.png";
 import saas5 from "./assets/saas5.png";
 
 const SaasWebsite = () => {
+  const [isLargerThan790, isLargerThan460] = useMediaQuery([
+    "(min-width: 790px)",
+    "(min-width: 460px)",
+  ]);
+
   return (
     <motion.div
       variants={imgVariants}
@@ -42,11 +48,12 @@ const SaasWebsite = () => {
           <Flex
             alignItems="center"
             marginTop="1rem"
+            direction={isLargerThan460 ? "row" : "column"}
             p={3}
             bg={useColorModeValue("#d4ffff", "#263838")}
             color={useColorModeValue("teal", "teal.100")}
             borderRadius="10px"
-            w="60%"
+            w="100%"
             gap={3}
           >
             <Text>website</Text>
@@ -68,7 +75,7 @@ const SaasWebsite = () => {
             bg={useColorModeValue("#d4ffff", "#263838")}
             color={useColorModeValue("teal", "teal.100")}
             borderRadius="10px"
-            w="40%"
+            w={isLargerThan790 ? "50%" : "100%"}
           >
             <Flex alignItems="center" gap={2}>
               Technologies
@@ -85,7 +92,11 @@ const SaasWebsite = () => {
           />
         </Box>
         <ReactLink to="/PortfolioPage">
-          <Button leftIcon={<ArrowBackIcon />} marginTop="2rem">
+          <Button
+            leftIcon={<ArrowBackIcon />}
+            marginTop="2rem"
+            marginBottom="3rem"
+          >
             back
           </Button>
         </ReactLink>

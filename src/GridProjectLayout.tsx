@@ -1,4 +1,4 @@
-import { Grid, GridItem, Image } from "@chakra-ui/react";
+import { Grid, GridItem, Image, useMediaQuery } from "@chakra-ui/react";
 
 type GridProjectLayoutProps = {
   img1: string;
@@ -15,11 +15,10 @@ const GridProjectLayout = ({
   img4,
   img5,
 }: GridProjectLayoutProps) => {
+  const [isLargerThan600] = useMediaQuery(["(min-width: 600px)"]);
   return (
     <Grid
-      h={430}
-      templateColumns="repeat(4, 1fr)"
-      templateRows="repeat(2, 1fr)"
+      templateColumns={isLargerThan600 ? "repeat(4, 1fr)" : ""}
       gap={4}
       marginTop="2.5rem"
     >
@@ -32,7 +31,7 @@ const GridProjectLayout = ({
           objectFit="cover"
         />
       </GridItem>
-      <GridItem colSpan={2} borderRadius={8}>
+      <GridItem colSpan={isLargerThan600 ? 2 : 0} borderRadius={8}>
         <Image
           src={img1}
           h="100%"
@@ -59,7 +58,7 @@ const GridProjectLayout = ({
           objectFit="cover"
         />
       </GridItem>
-      <GridItem colSpan={2} borderRadius={8} h={230}>
+      <GridItem colSpan={isLargerThan600 ? 2 : 0} borderRadius={8} h={230}>
         <Image
           src={img4}
           h="100%"
