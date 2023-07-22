@@ -25,6 +25,7 @@ const PortfolioCard = ({ cardImage, cardTitle }: PortfolioCardProps) => {
     >
       <Image
         src={cardImage}
+        fallbackSrc={cardImage}
         borderRadius="10px"
         width="100%"
         height="200px"
