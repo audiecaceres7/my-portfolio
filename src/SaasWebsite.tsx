@@ -46,7 +46,7 @@ const SaasWebsite = () => {
             bg={useColorModeValue("#d4ffff", "#263838")}
             color={useColorModeValue("teal", "teal.100")}
             borderRadius="10px"
-            w="60%"
+            w="50%"
             gap={3}
           >
             <Text>website</Text>
@@ -68,7 +68,7 @@ const SaasWebsite = () => {
             bg={useColorModeValue("#d4ffff", "#263838")}
             color={useColorModeValue("teal", "teal.100")}
             borderRadius="10px"
-            w="40%"
+            w="30%"
           >
             <Flex alignItems="center" gap={2}>
               Technologies

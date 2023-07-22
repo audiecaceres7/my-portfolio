@@ -27,6 +27,7 @@ const GridProjectLayout = ({
       <GridItem rowSpan={2} borderRadius={8} w="100%" h="100%">
         <LazyLoadImage
           src={img2}
+<<<<<<< HEAD
           placeholderSrc={img2}
           effect="blur"
           style={{
@@ -35,6 +36,12 @@ const GridProjectLayout = ({
             objectFit: "cover",
             borderRadius: "10px",
           }}
+=======
+          h="100%"
+          w="100%"
+          borderRadius={8}
+          objectFit="cover"
+>>>>>>> parent of ffda890 (Add lazy load to images)
         />
       </GridItem>
       <GridItem colSpan={2} borderRadius={8}>
