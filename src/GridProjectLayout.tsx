@@ -30,6 +30,7 @@ const GridProjectLayout = ({
           w="100%"
           borderRadius={8}
           objectFit="cover"
+          loading="lazy"
         />
       </GridItem>
       <GridItem colSpan={2} borderRadius={8}>
