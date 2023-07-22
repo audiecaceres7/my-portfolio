@@ -1,5 +1,4 @@
-import { Grid, GridItem } from "@chakra-ui/react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Grid, GridItem, Image } from "@chakra-ui/react";
 
 type GridProjectLayoutProps = {
   img1: string;
@@ -25,75 +24,48 @@ const GridProjectLayout = ({
       marginTop="2.5rem"
     >
       <GridItem rowSpan={2} borderRadius={8} w="100%" h="100%">
-        <LazyLoadImage
+        <Image
           src={img2}
-<<<<<<< HEAD
-          placeholderSrc={img2}
-          effect="blur"
-          style={{
-            height: "100%",
-            width: "100%",
-            objectFit: "cover",
-            borderRadius: "10px",
-          }}
-=======
           h="100%"
           w="100%"
           borderRadius={8}
           objectFit="cover"
->>>>>>> parent of ffda890 (Add lazy load to images)
         />
       </GridItem>
       <GridItem colSpan={2} borderRadius={8}>
-        <LazyLoadImage
+        <Image
           src={img1}
-          placeholderSrc={img1}
-          effect="blur"
-          style={{
-            height: "100%",
-            width: "100%",
-            objectFit: "cover",
-            borderRadius: "10px",
-          }}
+          h="100%"
+          w="100%"
+          borderRadius={8}
+          objectFit="cover"
         />
       </GridItem>
       <GridItem borderRadius={8}>
-        <LazyLoadImage
+        <Image
           src={img3}
-          placeholderSrc={img3}
-          effect="blur"
-          style={{
-            height: "100%",
-            width: "100%",
-            objectFit: "cover",
-            borderRadius: "10px",
-          }}
+          h="100%"
+          w="100%"
+          borderRadius={8}
+          objectFit="cover"
         />
       </GridItem>
       <GridItem colSpan={1} borderRadius={8}>
-        <LazyLoadImage
+        <Image
           src={img5}
-          placeholderSrc={img5}
-          effect="blur"
-          style={{
-            height: "100%",
-            width: "100%",
-            objectFit: "cover",
-            borderRadius: "10px",
-          }}
+          h="100%"
+          w="100%"
+          borderRadius={8}
+          objectFit="cover"
         />
       </GridItem>
       <GridItem colSpan={2} borderRadius={8} h={230}>
-        <LazyLoadImage
+        <Image
           src={img4}
-          placeholderSrc={img4}
-          effect="blur"
-          style={{
-            height: "100%",
-            width: "100%",
-            objectFit: "cover",
-            borderRadius: "10px",
-          }}
+          h="100%"
+          w="100%"
+          borderRadius={8}
+          objectFit="cover"
         />
       </GridItem>
     </Grid>

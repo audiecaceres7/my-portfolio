@@ -1,6 +1,5 @@
 import { useColorModeValue } from "@chakra-ui/react";
-import { Heading, Flex } from "@chakra-ui/react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Heading, Flex, Image } from "@chakra-ui/react";
 
 type PortfolioCardProps = {
   cardImage: string;
@@ -24,16 +23,12 @@ const PortfolioCard = ({ cardImage, cardTitle }: PortfolioCardProps) => {
         color: useColorModeValue("teal", "teal.100"),
       }}
     >
-      <LazyLoadImage
+      <Image
         src={cardImage}
-        placeholderSrc={cardImage}
-        effect="blur"
-        style={{
-          borderRadius: "10px",
-          backgroundSize: "cover",
-          width: "100%",
-          height: "200px",
-        }}
+        borderRadius="10px"
+        width="100%"
+        height="200px"
+        objectFit="cover"
       />
       <Heading as="h3" fontSize="1.6rem">
         {cardTitle}
