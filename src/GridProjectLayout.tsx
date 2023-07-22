@@ -1,4 +1,4 @@
-import { Grid, GridItem, Image } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 type GridProjectLayoutProps = {
