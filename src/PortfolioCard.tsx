@@ -29,6 +29,7 @@ const PortfolioCard = ({ cardImage, cardTitle }: PortfolioCardProps) => {
         h={200}
         borderRadius={8}
         objectFit="cover"
+        loading="lazy"
       />
       <Heading as="h3" fontSize="1.6rem">
         {cardTitle}
