@@ -35,7 +35,7 @@ const FolioWebsite = () => {
       transition={{ duration: 0.3, type: "EaseInOut" }}
     >
       <Box>
-        <Heading marginTop="3rem" textAlign="center" fontSize="3rem">
+        <Heading marginTop="3rem" textAlign="left" fontSize="3rem">
           Folio website
         </Heading>
         <Box marginTop="1rem">

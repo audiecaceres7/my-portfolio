@@ -11,7 +11,6 @@ const PortfolioCard = ({ cardImage, cardTitle }: PortfolioCardProps) => {
     <Flex
       flexDir="column"
       gap={4}
-      marginTop="3rem"
       padding="25px 30px"
       borderRadius={10}
       transition="ease-in-out 200ms"

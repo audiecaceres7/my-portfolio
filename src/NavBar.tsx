@@ -48,7 +48,7 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      <Flex gap={1}>
+      <Flex>
         <ToggleButton />
         <Box ml={2} display={{ base: "inline-block", md: "none" }}>
           <Menu>

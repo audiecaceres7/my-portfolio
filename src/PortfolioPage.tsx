@@ -19,7 +19,7 @@ const PortfolioPage = () => {
         exit="exit"
         transition={{ duration: 0.3, type: "EaseInOut" }}
       >
-        <Heading as="h1" fontSize="3rem" marginTop="2rem">
+        <Heading as="h1" fontSize="3rem" marginTop="3rem" marginBottom="2rem">
           My Portfolio
         </Heading>
         <Grid
